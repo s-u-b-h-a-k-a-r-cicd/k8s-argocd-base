@@ -15,3 +15,21 @@ spec:
     - p, proj:ops-poc:ops-poc-role, applications, sync, ops-poc/*, allow
   sourceRepos:
   - '*'
+  ---
+  apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: ops-poc-tools
+  namespace: argocd
+spec:
+  description: Use this project for all CICD tools by CKS team
+  destinations:
+  - namespace: '*'
+    server: https://kubernetes.default.svc
+  roles:
+  - description: CICD role decription
+    name: ops-poc-tools-role
+    policies:
+    - p, proj:ops-poc-tools:ops-poc-tools-role, applications, sync, ops-poc-tools/*, allow
+  sourceRepos:
+  - '*'

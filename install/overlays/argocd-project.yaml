@@ -15,7 +15,7 @@ spec:
     - p, proj:ops-poc:ops-poc-role, applications, sync, ops-poc/*, allow
   sourceRepos:
   - '*'
-  ---
+---
   apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
